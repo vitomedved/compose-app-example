@@ -1,4 +1,6 @@
 import com.android.build.gradle.LibraryExtension
+import com.example.convention.implementation
+import com.example.convention.library
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.artifacts.VersionCatalogsExtension
@@ -22,10 +24,9 @@ class AndroidFeatureConvention : Plugin<Project> {
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
 
             dependencies {
-                add("implementation", libs.findLibrary("androidx.lifecycle.runtimeCompose").get())
-                add("implementation", libs.findLibrary("androidx.lifecycle.viewModelCompose").get())
-
-                add("implementation", libs.findLibrary("kotlinx.coroutines.android").get())
+                implementation(libs.library("androidx.lifecycle.runtimeCompose"))
+                implementation(libs.library("androidx.lifecycle.viewModelCompose"))
+                implementation(libs.library("kotlinx.coroutines.android"))
             }
         }
     }

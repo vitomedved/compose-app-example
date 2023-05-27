@@ -3,9 +3,11 @@ import com.example.convention.ApplicationConfig
 import com.example.convention.configureAndroidCompose
 import com.example.convention.configureFlavors
 import com.example.convention.configureKotlinAndroid
+import com.example.convention.implementation
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
+import org.gradle.kotlin.dsl.dependencies
 
 @Suppress("unused")
 class AndroidApplicationComposeConvention : Plugin<Project> {
@@ -22,6 +24,12 @@ class AndroidApplicationComposeConvention : Plugin<Project> {
                 configureAndroidCompose(this)
                 configureFlavors(this)
                 defaultConfig.targetSdk = ApplicationConfig.TARGET_SDK_VERSION
+            }
+
+//            val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
+
+            dependencies {
+                implementation(project(":core:designsystem"))
             }
         }
     }

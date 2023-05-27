@@ -1,8 +1,10 @@
 import com.android.build.gradle.LibraryExtension
 import com.example.convention.ApplicationConfig
+import com.example.convention.androidTestImplementation
 import com.example.convention.configureAndroidCompose
 import com.example.convention.configureFlavors
 import com.example.convention.configureKotlinAndroid
+import com.example.convention.testImplementation
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.artifacts.VersionCatalogsExtension
@@ -38,8 +40,8 @@ class AndroidLibraryComposeConvention : Plugin<Project> {
             }
 
             dependencies {
-                add("androidTestImplementation", kotlin("test"))
-                add("testImplementation", kotlin("test"))
+                androidTestImplementation(kotlin("test"))
+                testImplementation(kotlin("test"))
             }
         }
     }

@@ -16,3 +16,7 @@ fun DependencyHandlerScope.androidTestImplementation(dependency: Any) {
 fun DependencyHandlerScope.coreLibraryDesugaring(dependency: Any) {
     add("coreLibraryDesugaring", dependency)
 }
+
+fun DependencyHandlerScope.testImplementation(dependency: Any) {
+    add("testImplementation", dependency)
+}

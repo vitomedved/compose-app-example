@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 rootProject.name = "MasterBlaster"
 
 include(":app")
+include(":core:designsystem")
