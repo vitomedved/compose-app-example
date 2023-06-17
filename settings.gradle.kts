@@ -18,7 +18,12 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MasterBlaster"
+rootProject.name = "ComposePayground"
 
 include(":app")
+
+include(":core:common")
 include(":core:designsystem")
+include(":core:navigation")
+
+include(":feature:menu")

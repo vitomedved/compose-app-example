@@ -26,27 +26,27 @@ gradlePlugin {
     plugins {
 
         register("androidApplicationCompose") {
-            id = "masterblaster.android.application.compose"
+            id = "example.android.application.compose"
             implementationClass = "AndroidApplicationComposeConvention"
         }
 
         register("androidLibraryCompose") {
-            id = "masterblaster.android.library.compose"
+            id = "example.android.library.compose"
             implementationClass = "AndroidLibraryComposeConvention"
         }
 
         register("androidFeature") {
-            id = "masterblaster.android.feature"
+            id = "example.android.feature"
             implementationClass = "AndroidFeatureConvention"
         }
 
         register("androidTest") {
-            id = "masterblaster.android.test"
+            id = "example.android.test"
             implementationClass = "AndroidTestConvention"
         }
 
         register("androidKtLint") {
-            id = "masterblaster.android.ktlint"
+            id = "example.android.ktlint"
             implementationClass = "AndroidKtLintConvention"
         }
     }

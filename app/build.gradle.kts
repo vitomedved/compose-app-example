@@ -1,15 +1,15 @@
 @file:Suppress("UnstableApiUsage")
 
 plugins {
-    id("masterblaster.android.application.compose")
-    id("masterblaster.android.ktlint")
+    id("example.android.application.compose")
+    id("example.android.ktlint")
 }
 
 android {
 
     defaultConfig {
 
-        applicationId = "com.example.masterblaster"
+        applicationId = "com.example.compose.playground"
 
         versionCode = 1
 
@@ -51,10 +51,13 @@ android {
         }
     }
 
-    namespace = "com.example.masterblaster"
+    namespace = "com.example.app"
 }
 
 dependencies {
+
+    implementation(project(":core:navigation"))
+    implementation(project(":feature:menu"))
 
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.appcompat)

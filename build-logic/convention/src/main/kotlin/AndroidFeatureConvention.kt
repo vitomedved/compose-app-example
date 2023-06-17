@@ -13,7 +13,7 @@ class AndroidFeatureConvention : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             pluginManager.apply {
-                apply("example.android.library")
+                apply("example.android.library.compose")
             }
             extensions.configure<LibraryExtension> {
                 defaultConfig {
@@ -27,6 +27,7 @@ class AndroidFeatureConvention : Plugin<Project> {
                 implementation(libs.library("androidx.lifecycle.runtimeCompose"))
                 implementation(libs.library("androidx.lifecycle.viewModelCompose"))
                 implementation(libs.library("kotlinx.coroutines.android"))
+                implementation(libs.library("androidx.navigation.compose"))
             }
         }
     }

@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.designsystem"
+    namespace = "com.example.core.navigation"
 
     defaultConfig {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
