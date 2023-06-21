@@ -1,5 +1,3 @@
-import com.example.convention.implementation
-
 plugins {
     id("example.android.feature")
     id("example.android.ktlint")
@@ -14,7 +12,4 @@ android {
 }
 
 dependencies {
-    implementation(project(":core:common"))
-    implementation(project(":core:designsystem"))
-    implementation(project(":core:navigation"))
 }

@@ -56,7 +56,9 @@ android {
 
 dependencies {
 
+    implementation(project(":core:common"))
     implementation(project(":core:navigation"))
+    implementation(project(":feature:huaweiscanner"))
     implementation(project(":feature:menu"))
 
     implementation(libs.androidx.activity.compose)

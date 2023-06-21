@@ -7,6 +7,7 @@ import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.getByType
+import org.gradle.kotlin.dsl.project
 
 @Suppress("unused")
 class AndroidFeatureConvention : Plugin<Project> {
@@ -24,6 +25,10 @@ class AndroidFeatureConvention : Plugin<Project> {
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
 
             dependencies {
+                implementation(project(":core:common"))
+                implementation(project(":core:designsystem"))
+                implementation(project(":core:navigation"))
+
                 implementation(libs.library("androidx.lifecycle.runtimeCompose"))
                 implementation(libs.library("androidx.lifecycle.viewModelCompose"))
                 implementation(libs.library("kotlinx.coroutines.android"))

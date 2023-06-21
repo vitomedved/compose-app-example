@@ -6,6 +6,7 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
+        maven { setUrl("https://developer.huawei.com/repo/") }
     }
 }
 
@@ -15,6 +16,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { setUrl("https://developer.huawei.com/repo/") }
     }
 }
 
@@ -26,4 +28,5 @@ include(":core:common")
 include(":core:designsystem")
 include(":core:navigation")
 
+include(":feature:huaweiscanner")
 include(":feature:menu")
